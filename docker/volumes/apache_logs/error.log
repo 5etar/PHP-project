@@ -1,0 +1,14 @@
+AH00112: Warning: DocumentRoot [/var/www/html] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.6. Set the 'ServerName' directive globally to suppress this message
+[Fri Jul 20 16:37:52.295068 2018] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.5 configured -- resuming normal operations
+[Fri Jul 20 16:37:52.295109 2018] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jul 20 16:38:09.804837 2018] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00112: Warning: DocumentRoot [/var/www/html] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Jul 20 16:38:15.511046 2018] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.5 configured -- resuming normal operations
+[Fri Jul 20 16:38:15.511091 2018] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jul 20 16:38:29.900126 2018] [core:error] [pid 20] [client 172.24.0.1:55948] AH00037: Symbolic link not allowed or link target not accessible: /var/www/html
+[Fri Jul 20 16:38:30.034250 2018] [core:error] [pid 20] [client 172.24.0.1:55948] AH00037: Symbolic link not allowed or link target not accessible: /var/www/html, referer: http://localhost:8000/
+[Fri Jul 20 16:38:39.828810 2018] [core:error] [pid 21] [client 172.24.0.1:55946] AH00037: Symbolic link not allowed or link target not accessible: /var/www/html
+[Fri Jul 20 16:38:40.620198 2018] [core:error] [pid 21] [client 172.24.0.1:55946] AH00037: Symbolic link not allowed or link target not accessible: /var/www/html, referer: http://localhost:8000/
+[Fri Jul 20 16:39:44.150242 2018] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down

@@ -1,0 +1,40 @@
+version: "2"
+
+services:
+
+  website:
+    image: petar:latest
+    depends_on:
+      - mysqldb
+    ports:
+      - "8000:80"
+    volumes:
+      - "./src/:/app"
+    env_file:
+      - petar-variables-local.env
+    environment:
+     TZ: "Europe/Sofia"
+
+  # ------------------ Databases ----------------------- #
+  mysqldb:
+    image: dnhsoft/mysql-utf8:5.7
+    volumes:
+     - "./docker/volumes/mysql:/var/lib/mysql"
+    environment:
+     TZ: 'Europe/Sofia'
+     MYSQL_ROOT_PASSWORD: '123456'
+
+  pma:
+    image: dnhsoft/phpmyadmin:4.6.3
+    depends_on:
+      - mysqldb
+    ports:
+      - "8001:80"
+    environment:
+     DBHOST: 'mysqldb'
+     DBUSER: 'root'
+     DBPASS: '123456'
+
+networks:
+  default:
+    driver: bridge
