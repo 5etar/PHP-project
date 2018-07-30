@@ -53,3 +53,32 @@ switch ($number=10) {
     echo "number is 10";
     break;
 }
+
+function calculation($number1, $number2) {
+
+    $sum = $number1 + $number2;
+
+    return $sum;
+
+}
+echo "<br>";
+echo calculation(5,9);
+
+echo "<br>";
+echo pow(3, 4);
+
+echo "<br>";
+echo rand(1, 1000);
+
+echo "<br>";
+echo sqrt(100);
+
+echo "<br>";
+echo ceil(4.1);
+
+echo "<br>";
+echo floor(4.6);
+
+echo "<br>";
+echo round(4.6);
+
