@@ -61,6 +61,7 @@ function calculation($number1, $number2) {
     return $sum;
 
 }
+
 echo "<br>";
 echo calculation(5,9);
 
