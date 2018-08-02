@@ -5,15 +5,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
-    $connection = new PDO("mysql:host=mysqldb;dbname=loginapplication;charset=UTF8", 'root', '123456');
-
-    if ($connection) {
-        echo 'We are connected ';
-    }
-    else {
-        die('Database connection failed ');
-    }
+    include 'db.php';
 
     $data = [
         ':username' => $username,
@@ -44,7 +36,7 @@ if (isset($_POST['submit'])) {
 
 <div class="container">
     <div class="col-sm-6">
-        <form action="login.php" method="post">
+        <form action="login_create.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" name="username">

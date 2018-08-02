@@ -1,13 +1,6 @@
 <?php
 
-    $connection = new PDO("mysql:host=mysqldb;dbname=loginapplication;charset=UTF8", 'root', '123456');
-
-    if ($connection) {
-        echo 'We are connected ';
-    }
-    else {
-        die('Database connection failed ');
-    }
+include 'db.php';
 
 $statement = $connection->query("SELECT * FROM users");
 while ($row = $statement->fetch()) {
