@@ -1,3 +1,2 @@
-.idea/
-.composer-cache
+.idea
 docker/volumes
