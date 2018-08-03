@@ -1,22 +1,9 @@
 <?php
 
-if (isset($_POST['submit'])) {
+include 'db.php';
+include 'functions.php';
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    include 'db.php';
-
-    $data = [
-        ':username' => $username,
-        ':password' => $password
-    ];
-
-    $statement = $connection->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-
-    var_dump($statement->execute($data));
-
-}
+    createRow();
 
 ?>
 
@@ -46,7 +33,7 @@ if (isset($_POST['submit'])) {
                 <input type="password" class="form-control" name="password">
             </div>
 
-            <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+            <input class="btn btn-primary" type="submit" name="submit" value="Create">
         </form>
     </div>
 </div>

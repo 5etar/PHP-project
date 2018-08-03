@@ -1,14 +1,9 @@
 <?php
 
 include 'db.php';
+include 'functions.php';
 
-$statement = $connection->query("SELECT * FROM users");
-while ($row = $statement->fetch()) {
-    echo "<br />\n";
-    echo $row['username']." : ";
-    echo $row['password']."<br />\n";
-}
-
+loginRead();
 
 ?>
 
